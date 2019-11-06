@@ -8,10 +8,11 @@ import Stroll from '../pages/stroll'
 
 Vue.use(VueRouter)
 
-const routes = [
-  {
-    path: '/home',
+let router = new VueRouter({
+  routes:[
+    {
     name: 'home',
+    path: '/',
     component: Home
   },
   {
@@ -33,17 +34,46 @@ const routes = [
     path: '/stroll',
     name: 'Stroll',
     component: Stroll
-  },
-  {
-    path: '/*',
-    redirect:"/home"
   }
-]
-
-const router = new VueRouter({
-  mode: 'history',
-  base: process.env.BASE_URL,
-  routes
+  ]
 })
-
 export default router
+// const routes = [
+//   {
+//     path: '/home',
+//     name: 'home',
+//     component: Home
+//   },
+//   {
+//     path: '/classify',
+//     name: 'Classify',
+//     component: Classify
+//   },
+//   {
+//     path: '/my',
+//     name: 'My',
+//     component: My
+//   },
+//   {
+//     path: '/shopcar',
+//     name: 'Shopcar',
+//     component: Shopcar
+//   },
+//   {
+//     path: '/stroll',
+//     name: 'Stroll',
+//     component: Stroll
+//   },
+//   {
+//     path: '/*',
+//     redirect:"/home"
+//   }
+// ]
+//
+// const router = new VueRouter({
+//   mode: 'history',
+//   base: process.env.BASE_URL,
+//   routes
+// })
+//
+// export default router

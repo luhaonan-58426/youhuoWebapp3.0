@@ -1,6 +1,9 @@
 <template>
   <div class="bottombar">
-    <router-link to="/home">首页</router-link>
+    <router-link to="/home">
+
+      首页
+    </router-link>
     <router-link to="/classify">分类</router-link>
     <router-link to="/stroll">逛</router-link>
     <router-link to="/shopcar">购物车</router-link>
@@ -18,6 +21,7 @@
   a{
     font-size:0.16rem;
     flex: 1;
+    color: black;
     text-align: center;
   }
   .bottombar{
@@ -26,5 +30,6 @@
     bottom:0px;
     display: flex;
     flex-direction: row;
+    background-color: white;
   }
 </style>

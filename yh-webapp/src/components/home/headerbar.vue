@@ -26,8 +26,8 @@ div{
   .yh{
     display: inline-block;
     width: 1.2rem;
-    height: 0.38rem;
-    margin: 0.08rem 0.1rem 0.04rem 0.7rem;
+    height: 0.36rem;
+    margin: 0.08rem 0.1rem 0.04rem 0.8rem;
   }
   .ss{
     display: inline-block;
