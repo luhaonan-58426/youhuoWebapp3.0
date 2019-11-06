@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="783bc3d2-bcf2-4e50-a87f-54440088b63e" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/footerbar/footbar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/footerbar/footbar.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/classify.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/classify.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/my.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/my.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/shopcar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/shopcar.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/stroll.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/stroll.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/router/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue.config.js" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1TDlqcQILO1EDRPfD0GoJcJauB4" />
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
+    <property name="prettierjs.PrettierConfiguration.Package" value="E:\H5学习\HBuilderProjects\三阶段\练习代码\vue\vue-cli-demo3.0\yh-webapp\node_modules\prettier" />
+    <property name="settings.editor.selected.configurable" value="fileTemplates" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="783bc3d2-bcf2-4e50-a87f-54440088b63e" name="Default Changelist" comment="" />
+      <created>1573002738540</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1573002738540</updated>
+      <workItem from="1573002739804" duration="4024000" />
+      <workItem from="1573007411436" duration="1406000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
