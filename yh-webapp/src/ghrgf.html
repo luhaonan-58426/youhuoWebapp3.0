@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>选项卡</title>
+    <script src="../node_modules/vue/dist/vue.js"></script>
+    <style>
+        /*li{*/
+        /*    list-style: none;*/
+        /*    float: left;*/
+        /*    margin-right: 20px;*/
+        /*}*/
+        .all{
+            background-color: #42b983;
+            position: relative;
+            width:40%;
+        }
+        .box{
+            background-color: chartreuse;
+            position: absolute;
+            left: 100%;
+            top: 0px;
+            width: 120%;
+        }
+    </style>
+</head>
+<body>
+<div >
+    <ul class="all">
+        <li>狂啃就
+            <div class="box">
+                <ul>
+                    <li>狂啃就</li>
+                    <li>狂啃就</li>
+                    <li>狂啃就</li>
+                    <li>狂啃就</li>
+                    <li>狂啃就</li>
+                    <li>狂啃就</li>
+                </ul>
+            </div></li>
+        <li>狂啃就</li>
+        <li>狂啃就</li>
+        <li>狂啃就</li>
+        <li>狂啃就</li>
+        <li>狂啃就</li>
+
+    </ul>
+
+
+</div>
+<div class="app">
+    <ul>
+        <li v-for="(item,index) in list" @click="tab(index)">{{item.tab}}
+            <div v-show="item.show">
+                {{item.title}}
+            </div>
+        </li>
+    </ul>
+</div>
+<script>
+    let obj=[
+        {"tab":"选项一","show":true,"title":"1111"},
+        {"tab":"选项二","show":false,"title":"2222"},
+        {"tab":"选项三","show":false,"title":"3333"}
+    ];
+    var vm=new Vue({
+        el:".app",
+        data:{
+            list:obj
+        },
+        methods:{
+            tab:function(index){
+                for(var i=0;i<this.list.length;i++){
+                    this.list[i].show=false;
+                    if(i==index){
+                        this.list[index].show=true;
+                    }
+                }
+            }
+        }
+    })
+</script>
+</body>
+</html>

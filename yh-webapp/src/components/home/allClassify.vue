@@ -16,8 +16,7 @@
 
 <style scoped lang="scss">
 .all{
-    margin: 0.1rem 0 0.2rem 0;
-  height: 0.4rem;
+    margin: 0.1rem 0 0.15rem 0;
   width: 100%;
   background-color: white;
     display: flex;

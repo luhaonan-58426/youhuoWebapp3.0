@@ -2,7 +2,7 @@
 <div>
   <img class="cd" src="../../../static/sy/cd.png" alt="">
   <img class="yh" src="../../../static/sy/yh.png" alt="">
-  <img class="yhb" v-show="false" src="../../../static/sy/yhb.png" alt="">
+<!--  <img class="yhb" v-show="false" src="../../../static/sy/yhb.png" alt="">-->
   <img class="ss" src="../../../static/sy/ss.png" alt="">
 </div>
 </template>
@@ -16,6 +16,9 @@
 <style scoped>
 div{
   background-color: #333333;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
 }
   .cd{
     display: inline-block;
@@ -27,12 +30,12 @@ div{
     display: inline-block;
     width: 1.2rem;
     height: 0.36rem;
-    margin: 0.08rem 0.1rem 0.04rem 0.8rem;
+    margin: 0.08rem 0.1rem 0.04rem 0rem;
   }
   .ss{
     display: inline-block;
     width: 0.5rem;
     height: 0.5rem;
-    margin: 0.01rem 0rem 0rem 0.64rem;
+    margin: 0.01rem 0rem 0rem 0rem;
   }
 </style>

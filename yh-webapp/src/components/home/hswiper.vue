@@ -33,6 +33,7 @@
   }
   .slide1>img{
     width: 100%;
+    height: 100%;
   }
   .slide1 {
     /*color: #fff;*/
