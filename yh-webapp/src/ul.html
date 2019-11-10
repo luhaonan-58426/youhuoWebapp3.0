@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        ul { displey:-webkit-flex;
+            display: flex;
+            -webkit-flex-flow:row nowrap; //设置排列方式为横向排列，并且超出元素不换行
+        flex-flow:row nowrap;
+            overflow-x: auto;
+            list-style: none;}
+        li {
+            margin-left: 20px; //每个li设置间距为20px
+        display: inline-block; //让所有的li在一行
+        /*注意这里不能用float:left 因为设置float后里超过一屏后会自动换行*/
+        }
+        #resent-search3 {
+            margin-left: 15px;
+            overflow-x: auto;
+            white-space:nowrap;
+            width: auto;
+        }
+        ::-webkit-scrollbar {
+            display: none;
+        }
+
+        .resent-search-tag3 {
+            display: inline-block;
+            font-size: 10pt;
+            border-radius: 3px;
+            background-color: #f0f2f5;
+            color: #686868;
+            padding: 2px 10px;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+<ul>
+    <li><img src="../static/sy/s1.jpg" alt=""></li>
+    <li><img src="../static/sy/s1.jpg" alt=""></li>
+    <li><img src="../static/sy/s1.jpg" alt=""></li>
+    <li><img src="../static/sy/s1.jpg" alt=""></li>
+    <li><img src="../static/sy/s1.jpg" alt=""></li>
+    <li><img src="../static/sy/s1.jpg" alt=""></li>
+    <li><img src="../static/sy/s1.jpg" alt=""></li>
+    <li><img src="../static/sy/s1.jpg" alt=""></li>
+</ul>
+<div id="resent-search-view3">
+    <div style="margin-bottom: 20px;">最近搜索3</div>
+    <ul id="resent-search3">
+        <li class="resent-search-tag3"><i>6500S</i></li>
+        <li class="resent-search-tag3"><i>SM-</i></li>
+        <li class="resent-search-tag3"><i>X26</i></li>
+        <li class="resent-search-tag3"><i>CS201</i></li>
+        <li class="resent-search-tag3"><i>BP8904</i></li>
+        <li class="resent-search-tag3"><i>101</i></li>
+        <li class="resent-search-tag3"><i>fi-61</i></li>
+        <li class="resent-search-tag3"><i>MT990</i></li>
+        <li class="resent-search-tag3"><i>惠普</i></li>
+        <li class="resent-search-tag3"><i>CDD8766</i></li>
+        <li class="resent-search-tag3"><i>南天</i></li>
+    </ul>
+</div>
+</body>
+</html>

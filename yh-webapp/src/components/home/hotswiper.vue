@@ -1,6 +1,8 @@
 <template>
     <swipe class="my-swipe">
-        <swipe-item v-for="(imgsrc,i) in hotbanner" :key="i" class="slide1"><img :src="imgsrc.src" alt=""></swipe-item>
+        <swipe-item v-for="(imgsrc,i) in hotbanner" :key="i" class="slide1">
+            <img :src="imgsrc.src" alt="">
+        </swipe-item>
     </swipe>
 </template>
 

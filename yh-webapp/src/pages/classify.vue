@@ -2,14 +2,14 @@
     <div class="classify">
         <input type="text" placeholder="搜索商品">
         <div class="nav">
-            <a @click="dboys">Boys</a>
-            <a @click="dgirls">Girls</a>
-            <a @click="dkids">Kids</a>
-            <a @click="dlifestyle">Lifestyle</a>
+            <a @click="dboys" :class="{topnav:boysnum==1}">Boys</a>
+            <a @click="dgirls" :class="{topnav:girlsnum==1}">Girls</a>
+            <a @click="dkids" :class="{topnav:kidsnum==1}">Kids</a>
+            <a @click="dlifestyle" :class="{topnav:lifenum==1}">Lifestyle</a>
         </div>
            <div v-show="boys" class="boys alls">
                <ul class="all">
-                   <li v-for="(item,index) in boyslist" @click="tab(index)" :class="{active:istrue==index}">
+                   <li v-for="(item,index) in boyslist" @click="tab(index)" :class="{active:bistrue==index}">
                        {{item.tab}}
                        <div class="box">
                            <ul v-show="item.show" class="bigbox">
@@ -21,7 +21,7 @@
            </div>
            <div v-show="girls" class="girls alls">
                <ul class="all">
-                   <li v-for="(item,index) in girlslist" @click="tag(index)">
+                   <li v-for="(item,index) in girlslist" @click="tag(index)" :class="{active:gistrue==index}">
                        {{item.tab}}
                        <div class="box">
                            <ul v-show="item.show" class="bigbox">
@@ -33,7 +33,7 @@
            </div>
            <div v-show="kids" class="kids alls">
                <ul class="all">
-                   <li v-for="(item,index) in kidslist" @click="tak(index)">
+                   <li v-for="(item,index) in kidslist" @click="tak(index)" :class="{active:kistrue==index}">
                        {{item.tab}}
                        <div class="box">
                            <ul v-show="item.show" class="bigbox">
@@ -45,7 +45,7 @@
            </div>
            <div v-show="lifestyle" class="lifestyle alls">
                <ul class="all">
-                   <li v-for="(item,index) in lifestylelist" @click="tal(index)">
+                   <li v-for="(item,index) in lifestylelist" @click="tal(index)" :class="{active:listrue==index}">
                        {{item.tab}}
                        <div class="box">
                            <ul v-show="item.show" class="bigbox">
@@ -69,7 +69,14 @@
         },
         data() {
             return {
-                istrue:0,
+                bistrue:0,
+                gistrue:0,
+                kistrue:0,
+                listrue:0,
+                boysnum:1,
+                girlsnum:0,
+                kidsnum:0,
+                lifenum:0,
                 boys: true,
                 girls: false,
                 kids: false,
@@ -595,28 +602,44 @@
                 this.boys = true,
                     this.girls = false,
                     this.kids = false,
-                    this.lifestyle = false
+                    this.lifestyle = false,
+                    this.boysnum=1,
+                    this.girlsnum=0,
+                    this.kidsnum=0,
+                    this.lifenum=0
             },
             dgirls() {
                 this.boys = false,
                     this.girls = true,
                     this.kids = false,
-                    this.lifestyle = false
+                    this.lifestyle = false,
+                    this.boysnum=0,
+                    this.girlsnum=1,
+                    this.kidsnum=0,
+                    this.lifenum=0
             },
             dkids() {
                 this.boys = false,
                     this.girls = false,
                     this.kids = true,
-                    this.lifestyle = false
+                    this.lifestyle = false,
+                    this.boysnum=0,
+                    this.girlsnum=0,
+                    this.kidsnum=1,
+                    this.lifenum=0
             },
             dlifestyle() {
                 this.boys = false,
                     this.girls = false,
                     this.kids = false,
-                    this.lifestyle = true
+                    this.lifestyle = true,
+                    this.boysnum=0,
+                    this.girlsnum=0,
+                    this.kidsnum=0,
+                    this.lifenum=1
             },
             tab: function (index) {
-                this.istrue=index;
+                this.bistrue=index;
                 for (var i = 0; i < this.boyslist.length; i++) {
                     this.boyslist[i].show = false;
                     if (i == index) {
@@ -625,7 +648,7 @@
                 }
             },
             tag: function (index) {
-                this.istrue=index;
+                this.gistrue=index;
                 for (var i = 0; i < this.girlslist.length; i++) {
                     this.girlslist[i].show = false;
                     if (i == index) {
@@ -634,7 +657,7 @@
                 }
             },
             tak: function (index) {
-                this.istrue=index;
+                this.kistrue=index;
                 for (var i = 0; i < this.kidslist.length; i++) {
                     this.kidslist[i].show = false;
                     if (i == index) {
@@ -643,7 +666,7 @@
                 }
             },
             tal: function (index) {
-                this.istrue=index;
+                this.listrue=index;
                 for (var i = 0; i < this.lifestylelist.length; i++) {
                     this.lifestylelist[i].show = false;
                     if (i == index) {
@@ -659,7 +682,7 @@
     .classify {
         text-align: center;
         background-color: #f0f0f0;
-
+        position: relative;
         input {
             height: 0.35rem;
             border: none;
@@ -670,17 +693,21 @@
             background-size: 0.25rem 0.25rem;
             margin: 0.1rem 0;
             padding-left: 0.3rem;
+            font-size: 0.16rem;
         }
 
         .nav {
             display: flex;
             justify-content: space-between;
             margin-bottom: 0.02rem;
-
+            .topnav{
+                color: black;
+                font-weight: 600;
+            }
             a {
                 width: 24.8%;
                 background-color: white;
-                color: black;
+                color: grey;
                 height: 0.35rem;
                 line-height: 0.35rem;
             }
@@ -692,6 +719,7 @@
                 background-color: #f0f0f0;
                 width: 40%;
                 text-align: left;
+                margin-bottom: 0.55rem;
                 li {
                     display: block;
                     color: black;
@@ -714,7 +742,7 @@
         .bigbox{
             padding-bottom: 0.55rem;
             li{
-                /*margin-bottom: 0.01rem;*/
+
                 background-color: white;
                 /*border-bottom: #f0f0f0 0.01rem solid;*/
             }
@@ -726,4 +754,5 @@
     .active{
         background-color: white;
     }
+
 </style>
