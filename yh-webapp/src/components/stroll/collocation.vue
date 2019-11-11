@@ -4,7 +4,8 @@
             <img :src="main.src" alt="" class="mainimg">
             <p>{{main.title}}</p>
             <p>{{main.name}}</p>
-            <p>搭配|{{main.lnum}}人阅读
+            <p class="dzp">
+                <span>搭配|{{main.lnum}}人阅读</span>
                 <span>{{main.dnum}}
                     <img class="dz" src="../../../static/stroll/dz.png" alt="">
                 </span>
@@ -75,5 +76,12 @@
     .bottom{
         display: block;
         padding-bottom: 0.8rem;
+    }
+    .dzp{
+        display: flex;
+        justify-content: space-between;
+        span{
+            padding-right: 0.15rem;
+        }
     }
 </style>

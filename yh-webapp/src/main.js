@@ -2,6 +2,7 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
 
+
 require('vue-swipe/dist/vue-swipe.css');
 import { Swipe, SwipeItem } from 'vue-swipe';
 Vue.component('swipe', Swipe);

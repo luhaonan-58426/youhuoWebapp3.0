@@ -13,7 +13,7 @@
                        {{item.tab}}
                        <div class="box">
                            <ul v-show="item.show" class="bigbox">
-                               <li v-for="(val,i) in item.title">{{val.righttit}}</li>
+                               <li @click="prolist" v-for="(val,i) in item.title">{{val.righttit}}</li>
                            </ul>
                        </div>
                    </li>
@@ -25,7 +25,7 @@
                        {{item.tab}}
                        <div class="box">
                            <ul v-show="item.show" class="bigbox">
-                               <li v-for="(val,i) in item.title">{{val.righttit}}</li>
+                               <li @click="prolist" v-for="(val,i) in item.title">{{val.righttit}}</li>
                            </ul>
                        </div>
                    </li>
@@ -37,7 +37,7 @@
                        {{item.tab}}
                        <div class="box">
                            <ul v-show="item.show" class="bigbox">
-                               <li v-for="(val,i) in item.title">{{val.righttit}}</li>
+                               <li @click="prolist" v-for="(val,i) in item.title">{{val.righttit}}</li>
                            </ul>
                        </div>
                    </li>
@@ -49,7 +49,7 @@
                        {{item.tab}}
                        <div class="box">
                            <ul v-show="item.show" class="bigbox">
-                               <li v-for="(val,i) in item.title">{{val.righttit}}</li>
+                               <li @click="prolist" v-for="(val,i) in item.title">{{val.righttit}}</li>
                            </ul>
                        </div>
                    </li>
@@ -598,6 +598,9 @@
             }
         },
         methods: {
+            prolist(){
+                this.$router.push({path:'/productlist'})
+            },
             dboys() {
                 this.boys = true,
                     this.girls = false,

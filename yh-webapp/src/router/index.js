@@ -5,6 +5,7 @@ import Classify from '../pages/classify'
 import My from '../pages/my'
 import Shopcar from '../pages/shopcar'
 import Stroll from '../pages/stroll'
+import Productlist from '../pages/productlist'
 // import Boys from '../components/classify/boys'
 // import Girls from '../components/classify/girls'
 // import Kids from '../components/classify/kids'
@@ -75,6 +76,11 @@ let router = new VueRouter({
     name: 'Stroll',
     component: Stroll
   },
+    {
+      path: '/productlist',
+      name: 'Productlist',
+      component: Productlist
+    },
     {
     path: '/',
     redirect:"/home"

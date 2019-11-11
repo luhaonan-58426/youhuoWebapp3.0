@@ -1,11 +1,14 @@
 <template>
     <div class="box">
         <p class="p">为你优选新品</p>
-        <div class="pro" v-for="(val,i) in product" :key="i">
-            <img :src="val.src" alt="">
-            <p>{{val.title}}</p>
-            <p> {{val.price}}<img src="" alt=""></p>
+        <div class="probox">
+            <div class="pro" v-for="(val,i) in product" :key="i">
+                <img :src="val.src" alt="">
+                <p>{{val.title}}</p>
+                <p> {{val.price}}<img class="priceimg" src="../../static/productlist/dd.png" alt=""></p>
+            </div>
         </div>
+
         <span class="bottom">  </span>
     </div>
 </template>
@@ -39,12 +42,26 @@
         width: 100%;
         .p{
             text-align: center;
+            margin: 0.2rem 0;
         }
-        .pro{
-            width: 50%;
-            display: inline-block;
-            img{
-                width: 100%;
+        .probox{
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            .pro{
+                width: 44%;
+                display: inline-block;
+                img{
+                    width: 100%;
+                }
+                p{
+                    .priceimg{
+                        display: inline-block;
+                        width: 0.2rem;
+                        vertical-align: middle;
+                        margin-left: 40%;
+                    }
+                }
             }
         }
         .bottom{
@@ -52,6 +69,4 @@
             padding-bottom: 0.8rem;
         }
     }
-
-
 </style>
